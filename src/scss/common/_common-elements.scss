@@ -1,0 +1,14 @@
+.button {
+    padding: 12px 24px;
+    background: $yellow;
+    box-shadow: 0px 8px 15px rgba($yellow, 0.4);
+    border-radius: 23px;
+    border-bottom: 3px solid $dark-yellow;
+    &__arrow {
+        width: 15px;
+        height: 14px;
+        position: relative;
+        left: 5px;
+        top: 2px;
+   }
+}

@@ -1,0 +1,33 @@
+.promo {
+    padding: 35px 127px 100px;
+
+    &-wrapper{
+        border-radius: 16px;
+        margin: 0 auto;
+        padding: 5px;
+        max-width: 896px;
+        box-shadow: 0px 16px 48px rgba($dark-blue, 0.1);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-item {
+        // max-width: 25%;
+        padding: 25px;
+        text-align: center;
+
+        &__number {
+            @include header;
+            color: $yellow;
+            font-size: 66px;
+            display: inline-block;
+            padding: 12px;
+        }
+
+        &__text_bold {
+            @include sub_header;
+            padding: 15px 0;
+
+        }
+    }
+}
