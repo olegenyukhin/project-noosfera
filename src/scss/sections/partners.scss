@@ -1,0 +1,32 @@
+.partners {
+    padding: 70px 0;
+    h2 {
+        padding-bottom: 50px;
+    }
+}
+
+.partners-wrapper {
+    padding: 50px 127px 30px;
+    box-shadow: 0px 0px 30px 5px rgba($dark-blue, 0.1);
+    font-weight: 500;
+    font-size: 20px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    // grid-column-gap: 60px;
+    justify-content: center;
+
+    .partner {
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+
+        &__img {
+            min-width: 163px;
+        }
+
+        &__name {
+            padding: 20px;
+        }
+    }
+}

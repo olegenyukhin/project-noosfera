@@ -1,0 +1,31 @@
+.pushkin-fest {
+    padding: 50px 127px 90px;
+    background-color: $white-blue;
+
+    h2 {
+        padding-bottom: 20px;
+    }
+}
+
+.fest-wrapper {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.fest {
+    &__annotation {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    &__text {
+        padding-bottom: 45px;
+        opacity: 0.5;
+    }
+}
+
+.pushkin-fest__img {
+    float: left;
+    width: 300px;
+    padding-right: 46px;
+}

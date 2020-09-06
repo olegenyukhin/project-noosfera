@@ -1,4 +1,22 @@
-body {
-    background-color: #F8FCFF;
-    // background: linear-gradient(180deg, rgba(248, 252, 255, 0) 0%, #F8FCFF 5.7%);
+@import "./common/variables.scss";
+@import "./common/settings.scss";
+@import "./common/common-elements";
+
+@import "./sections/header.scss";
+@import "./sections/promo.scss";
+@import "./sections/fests.scss";
+@import "./sections/video-slider.scss";
+@import "./sections/partners.scss";
+@import "./sections/contacts";
+@import"./sections/footer.scss";
+
+.wrapper {
+    width: $wrapper-max-width;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: $wrapper-max-width + 17px) {
+        width: 100%;
+    }
 }

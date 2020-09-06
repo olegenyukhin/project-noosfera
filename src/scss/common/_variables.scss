@@ -1,0 +1,36 @@
+$yellow: #FFCA3F;
+$dark-yellow: #CD980D;
+$dark-blue: #00003F;
+$white-blue: #F8FCFF;
+$white: #FFF;
+
+$header-nav-height: 50px;
+$wrapper-max-width: 1280px;
+$tablet-breackpoint: 1024px;
+
+@mixin header {
+    font: {
+        family: "Lora", Arial, sans-serif;
+        size: 26px;
+        weight: 700;
+    }
+    color: $dark-blue;
+}
+
+@mixin sub-header {
+    font: {
+        family: "Roboto", Arial, sans-serif;
+        size: 20px;
+        weight: 500;
+    }
+    color: $dark-blue;
+}
+
+@mixin text {
+    font: {
+        family: "Roboto", Arial, sans-serif;
+        size: 16px;
+        weight: 400;
+    }
+    color: $dark-blue;
+}
