@@ -8,49 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <header class="page-header">
-            <nav class="header-nav">
+    <header class="page-header">
+        <div class="header-nav">
+            <nav class="wrapper">
                 <button type="button" class="header-menu-button"></button>
-                <!-- <div class="header-nav-wrapper"> -->
-                    <ul class="main-nav">
-                        <li class="main-nav__link main-nav__link_active main-nav__link_disabled"><a href=#promo>Главная</a></li>
-                        <li class="main-nav__link"><a href=#pushkin-fest>Проекты</a></li>
-                        <li class="main-nav__link"><a href=#>Об&nbsp;организации</a></li>
-                        <li class="main-nav__link"><a href=#partners>Партнеры</a></li>
-                        <li class="main-nav__link"><a href=#contacts>Контакты</a></li>
-                    </ul>
-                <!-- </div> -->
+                <ul class="main-nav">
+                    <li class="main-nav__link"><a href=#>Главная</a></li>
+                    <li class="main-nav__link"><a href=#pushkin-fest>Проекты</a></li>
+                    <li class="main-nav__link"><a href=#>Об&nbsp;организации</a></li>
+                    <li class="main-nav__link"><a href=#partners>Партнеры</a></li>
+                    <li class="main-nav__link"><a href=#contacts>Контакты</a></li>
+                </ul>
             </nav>
+        </div>
+        <div class="planet"></div>
+        <div class="wrapper">
             <div class="header">
                 <img class="header__logo" src="./assets/images/logo-big.svg" alt="АНО Культурно-Развивающий Центр 'НООСФЕРА'">
                 <div class="header__contacts">
                     <span>г.Тольятти</span>
-                    <span>8 (8482) 78 65 49</span>
+                    <a href="tel:88482786549">8 (8482) 78 65 49</a>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
         <main>
             <section class="promo" id="promo">
                 <ul class="promo-wrapper">
                     <li class="promo-item">
                         <span class="promo-item__number">600</span>
-                        <p class="promo-item__text_bold">Участников II фестиваля</p>
+                        <p class="promo-item__text--bold">Участников II&nbsp;фестиваля</p>
                         <span class="promo-item__text">"Руслан и Людмила" в 2019 году</span>
                     </li>
                     <li class="promo-item">
                         <span class="promo-item__number">3</span>
-                        <p class="promo-item__text_bold">Года успешной работы</p>
+                        <p class="promo-item__text--bold">Года успешной работы</p>
                         <span class="promo-item__text">в сфере культурного развития населения</span>
                     </li>
                     <li class="promo-item">
                         <span class="promo-item__number">250</span>
-                        <p class="promo-item__text_bold">Учреждений-партнёров</p>
+                        <p class="promo-item__text--bold">Учреждений-партнёров</p>
                         <span class="promo-item__text">принимают участие в нашей деятельности</span>
                     </li>
                     <li class="promo-item">
                         <span class="promo-item__number">750</span>
-                        <p class="promo-item__text_bold">Онлайн зрителей</p>
+                        <p class="promo-item__text--bold">Онлайн зрителей</p>
                         <span class="promo-item__text">поддерживают наш канал</span>
                     </li>
             </section>
@@ -69,40 +71,128 @@
                         В Фестивале приняли участие около 250 детей и молодёжи Тольятти.
                         2-ой городской Фестиваль собрал уже около 600 участников из дошкольных, школьных и других образовательных учреждений.
                     </p>
-                    <a href="" class="button">Подробнее <img src="./assets/images/right-arrow.svg" alt="" class="button__arrow"></a>
+                    <a href="" class="button">
+                        Подробнее&nbsp;<img src="./assets/images/right-arrow.svg" alt="" class="button__arrow">
+                    </a>
                 </div>
             </section>
             <section class="video-slider">
                 <h2>Видео о Фестивале</h2>
-                <div class="slider"></div>
+                <div class="wrapper">
+                    <div class="slider">
+                        <button type="button" class="slider__button--prev">&lsaquo;</button>
+                        <div class="slider__wrapper">
+                            <ul class="slider__list">
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="video__preview">
+                                            <img class="video__poster" src="./assets/images/video_02.png" alt="">
+                                            <button class="video__button">
+                                                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="circle" cx="32.5" cy="32.5" r="31.5" opacity="0.85" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                    <path class="triangle" d="M28.0833 24.8501L41.3333 32.5L28.0833 40.1499L28.0833 24.8501Z" opacity="0.8" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="video__name">Тольятти 24. Тольятти в деталях о Пушкинском Фестивале</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="video__preview">
+                                            <img class="video__poster" src="./assets/images/video_01.png" alt="">
+                                            <button class="video__button">
+                                                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="circle" cx="32.5" cy="32.5" r="31.5" opacity="0.85" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                    <path class="triangle" d="M28.0833 24.8501L41.3333 32.5L28.0833 40.1499L28.0833 24.8501Z" opacity="0.8" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="video__name">Финал Первого городского Фестиваля “Руслан и Людмила”</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="video__preview">
+                                            <img class="video__poster" src="./assets/images/video_03.png" alt="">
+                                            <button class="video__button">
+                                                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="circle" cx="32.5" cy="32.5" r="31.5" opacity="0.85" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                    <path class="triangle" d="M28.0833 24.8501L41.3333 32.5L28.0833 40.1499L28.0833 24.8501Z" opacity="0.8" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="video__name">День первый. Первый городской Фестиваль “Руслан и Людмила”</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="video__preview">
+                                            <img class="video__poster" src="./assets/images/video_01.png" alt="">
+                                            <button class="video__button">
+                                                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="circle" cx="32.5" cy="32.5" r="31.5" opacity="0.85" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                    <path class="triangle" d="M28.0833 24.8501L41.3333 32.5L28.0833 40.1499L28.0833 24.8501Z" opacity="0.8" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="video__name">День второй. Первый городской Фестиваль “Руслан и Людмила”</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="video__preview">
+                                            <img class="video__poster" src="./assets/images/video_03.png" alt="">
+                                            <button class="video__button">
+                                                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="circle" cx="32.5" cy="32.5" r="31.5" opacity="0.85" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                    <path class="triangle" d="M28.0833 24.8501L41.3333 32.5L28.0833 40.1499L28.0833 24.8501Z" opacity="0.8" fill="white" stroke="#00003F" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="video__name">День третий. Первый городской Фестиваль “Руслан и Людмила”</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="slider__button--next">&rsaquo;</button>
+                    </div>
+                    <input class="slider__dot" type="radio" name="slider" data-number="1" checked="checked"/>
+                    <input class="slider__dot" type="radio" name="slider" data-number="2"/>
+                    <input class="slider__dot" type="radio" name="slider" data-number="3"/>
+                    <input class="slider__dot" type="radio" name="slider" data-number="4"/>
+                    <input class="slider__dot" type="radio" name="slider" data-number="5"/>
+                  </div>
             </section>
 
             <section class="partners" id="partners">
                 <h2>Наши партнёры</h2>
                 <div class="partners-wrapper">
-                    <div class="partner">
-                        <img src="./assets/images/partner-shr_artists.svg" class="partner__img" alt="Тольяттинское отделение ВТОО “Союз художников России”">
-                        <span class="partner__name">Тольяттинское отделение ВТОО “Союз художников России”</span>
-                    </div>
-                    <div class="partner">
-                        <img src="./assets/images/partner-lit_theatre.svg" class="partner__img" alt="Литературный театр им. А.С. Пушкина">
-                        <span class="partner__name">Литературный театр им. А.С. Пушкина</span>
-                    </div>
-                    <div class="partner">
-                        <img src="./assets/images/partner-teachers.svg" class="partner__img" alt="Ассоциация учителей русского языка и литературы г.о. Тольятти">
-                        <span class="partner__name">Ассоциация учителей русского языка и литературы г.о. Тольятти</span>
-                    </div>
-                    <div class="partner">
-                        <img src="./assets/images/partner-teachers.svg" class="partner__img" alt="Ассоциация учителей русского языка и литературы г.о. Тольятти">
-                        <span class="partner__name">Ассоциация учителей русского языка и литературы г.о. Тольятти</span>
-                    </div>
-                    <div class="partner">
-                        <img src="./assets/images/partner-puppet_theatre.svg" class="partner__img" alt="МБУИ г.о. Тольятти “Тольятинский театр кукол”">
-                        <span class="partner__name">МБУИ г.о. Тольятти “Тольятинский театр кукол”</span>
-                    </div>
-                    <div class="partner">
-                        <img src="./assets/images/partner-puppet_theatre.svg" class="partner__img" alt="МБУИ г.о. Тольятти “Тольятинский театр кукол”">
-                        <span class="partner__name">МБУИ г.о. Тольятти “Тольятинский театр кукол”</span>
+                    <div class="wrapper">
+                        <div class="partner">
+                            <img src="./assets/images/partner-shr_artists.svg" class="partner__img" alt="Тольяттинское отделение ВТОО “Союз художников России”">
+                            <span class="partner__name">Тольяттинское отделение ВТОО “Союз художников России”</span>
+                        </div>
+                        <div class="partner">
+                            <img src="./assets/images/partner-lit_theatre.svg" class="partner__img" alt="Литературный театр им. А.С. Пушкина">
+                            <span class="partner__name">Литературный театр им.&nbsp;А.С. Пушкина</span>
+                        </div>
+                        <div class="partner">
+                            <img src="./assets/images/partner-teachers.svg" class="partner__img" alt="Ассоциация учителей русского языка и литературы г.о. Тольятти">
+                            <span class="partner__name">Ассоциация учителей русского языка и литературы г.о. Тольятти</span>
+                        </div>
+                        <div class="partner">
+                            <img src="./assets/images/partner-teachers.svg" class="partner__img" alt="Ассоциация учителей русского языка и литературы г.о. Тольятти">
+                            <span class="partner__name">Ассоциация учителей русского языка и литературы г.о. Тольятти</span>
+                        </div>
+                        <div class="partner">
+                            <img src="./assets/images/partner-puppet_theatre.svg" class="partner__img" alt="МБУИ г.о. Тольятти “Тольятинский театр кукол”">
+                            <span class="partner__name">МБУИ г.о. Тольятти “Тольятинский театр кукол”</span>
+                        </div>
+                        <div class="partner">
+                            <img src="./assets/images/partner-puppet_theatre.svg" class="partner__img" alt="МБУИ г.о. Тольятти “Тольятинский театр кукол”">
+                            <span class="partner__name">МБУИ г.о. Тольятти “Тольятинский театр кукол”</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -113,28 +203,36 @@
             </section>
         </main>
         <footer class="page-footer">
-            <img class="page-footer__logo" src="./assets/images/logo-big.svg" alt="АНО Культурно-Развивающий Центр 'НООСФЕРА'">
-            <nav class="page-footer__nav">
-                <ul class="footer-nav">
-                    <li class="footer-nav__link footer-nav__link_active footer-nav__link_disabled"><a href=#promo>Главная</a></li>
-                    <li class="footer-nav__link"><a href=#>Уставные документы</a></li>
-                    <li class="footer-nav__link"><a href=#>Об&nbsp;организации</a></li>
-                    <li class="footer-nav__link"><a href=#partners>Партнеры</a></li>
-                    <li class="footer-nav__link"><a href=#pushkin-fest>Проекты</a></li>
-                    <li class="footer-nav__link"><a href=#contacts>Контакты</a></li>
-                </ul>
-            </nav>
-            <address class="page-footer__address">
-                <span class="postal-address">
-                    Адрес:&nbsp;445000,&nbsp;Самарская&nbsp;обл.,
-                    г.Тольятти, ул.&nbsp;Ленинградская,
-                    д.&nbsp;45,&nbsp;оф.&nbsp;505
-                </span>
-                <span class="phones">
-                    <span>8 (8482) 78 65 49</span>
-                    <span>8 (927) 613 22 84</span>
-                </span>
-            </address>
+            <div class="wrapper">
+                <div class="page-footer__logo">
+                    <a href=#><img src="./assets/images/logo-big.svg" alt="АНО Культурно-Развивающий Центр 'НООСФЕРА'"></a>
+                    <div class="page-footer__docs">
+                        <a href="./documents" download="">Политика конфиденциальности</a>
+                        <a href="./documents" download="">Соглашение на обработку ПД</a>
+                    </div>
+                </div>
+                <nav class="page-footer__nav">
+                    <ul class="footer-nav">
+                        <li class="footer-nav__link"><a href=#promo>Главная</a></li>
+                        <li class="footer-nav__link"><a href=#>Уставные документы</a></li>
+                        <li class="footer-nav__link"><a href=#>Об&nbsp;организации</a></li>
+                        <li class="footer-nav__link"><a href=#partners>Партнеры</a></li>
+                        <li class="footer-nav__link"><a href=#pushkin-fest>Проекты</a></li>
+                        <li class="footer-nav__link"><a href=#contacts>Контакты</a></li>
+                    </ul>
+                </nav>
+                <address class="page-footer__address">
+                    <span class="postal-address">
+                        Адрес:&nbsp;445000,&nbsp;Самарская&nbsp;обл.,
+                        г.&nbsp;Тольятти, ул.&nbsp;Ленинградская,
+                        д.&nbsp;45,&nbsp;оф.&nbsp;505
+                    </span>
+                    <span class="phones">
+                        <a href="tel:88482786549">8 (8482) 78 65 49</a>
+                        <a href="tel:89276132284">8 (927) 613 22 84</a>
+                    </span>
+                </address>
+            </div>
         </footer>
     </div>
 </body>

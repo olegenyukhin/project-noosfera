@@ -7,24 +7,8 @@
     height: $header-nav-height;
     width: $wrapper-max-width;
     z-index: 10;
-
-    @media screen and (max-width: $wrapper-max-width) {
-        width: 100%;
-    }
-
-    @media screen and (max-width: $tablet-breackpoint) {
-        .main-nav {
-            transform: translateX(100%);
-            visibility: hidden;
-            opacity: 0;
-        }
-
-        .header-menu-button {
-            visibility: visible;
-            opacity: 1;
-            background-color: $yellow;
-        }
-    }
+    background-color: $yellow;
+    width: 100%;
 }
 
 .header-menu-button {
@@ -37,12 +21,11 @@
 }
 
 .main-nav {
-    transition: all 0.5s ease-out 0.5s;
+    transition: all 0.5s ease-out 0s;
     height: $header-nav-height;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $yellow;
 
     &__link {
         text-align: center;
@@ -59,11 +42,22 @@
         a {
             padding: 16px;
             &:hover {
-                font-weight: bold;
-                opacity: 1;
+                text-decoration: underline;
+                // font-weight: bold;
+                // opacity: 1;
             }
         }
     }
+}
+
+.planet {
+    position: absolute;
+    background: url("../assets/images/planet.svg");
+    width: 1013px;
+    height: 1009px;
+    top: -370px;
+    z-index: -10;
+    right: -310px;
 }
 
 .header {
@@ -81,7 +75,7 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        &>span {
+        &>span, &>a {
             padding: 5px;
         }
     }
