@@ -1,20 +1,20 @@
 .promo {
     padding: 30px 127px 100px;
 
-    &-wrapper{
+    &-wrapper {
         background-color: $white;
         border-radius: 16px;
         margin: 0 auto;
         padding: 15px;
-        width: 896px;
-        // max-width: 896px;
+        // width: 896px;
+        max-width: 896px;
         box-shadow: 0px 16px 48px rgba($dark-blue, 0.1);
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
     }
 
     &-item {
-        max-width: 28%;
+        max-width: 225px;
         padding: 25px;
         text-align: center;
 
@@ -29,7 +29,6 @@
         &__text--bold {
             @include sub_header;
             padding: 15px 0;
-
         }
     }
 }
