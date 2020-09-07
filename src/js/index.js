@@ -15,7 +15,9 @@ prevSliderButton.addEventListener('click', () => {
     if (position >= 0) {
         position = -maxPosition - 1;
     }
-    position++
+    position++;
+    
+    sliderDots[-position + 1].checked = true;
     slider.style.transform = `translateX(${position * itemWidth}px)`;
 })
 
@@ -24,6 +26,8 @@ nextSliderButton.addEventListener('click', () => {
         position = 1;
     }
     position--;
+    
+    sliderDots[-position + 1].checked = true;
     slider.style.transform = `translateX(${position * itemWidth}px)`;
 })
 
