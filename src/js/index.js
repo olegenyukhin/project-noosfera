@@ -6,6 +6,8 @@ const itemsNumber = slider.children.length;
 const itemWidth = slider.children[0].clientWidth;
 const maxPosition = itemsNumber - (slider.clientWidth / itemWidth);
 
+const sliderDots = document.querySelectorAll('.slider__dot');
+
 const prevSliderButton = document.querySelector('.slider__button--prev');
 const nextSliderButton = document.querySelector('.slider__button--next');
 
@@ -30,8 +32,6 @@ nextSliderButton.addEventListener('click', () => {
     sliderDots[-position + 1].checked = true;
     slider.style.transform = `translateX(${position * itemWidth}px)`;
 })
-
-const sliderDots = document.querySelectorAll('.slider__dot');
 
 sliderDots.forEach(dot => {
     dot.addEventListener('click', ({ target }) => {
