@@ -1,4 +1,116 @@
 .video-slider {
     background-color: $white-blue;
-    padding: 20px 127px 50px;
+    .wrapper {
+        padding: 20px 120px 50px;
+        text-align: center;
+    }
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+
+    &__wrapper {
+        width: 900px;
+        overflow: hidden;
+    }
+
+    &__list {
+        display: flex;
+        transition: all 0.5s ease-out 0s;
+    }
+
+    &__item {
+        display: inline-block;
+        width: 300px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    &__button--prev,
+    &__button--next {
+        @include sub-header;
+        height: 170px;
+        margin-top: 25px;
+        width: 30px;
+        font-size: 70px;
+        opacity: 0.5;
+
+        &:hover:not(:disabled) {
+            opacity: 1;
+        }
+    }
+
+    &__dot{
+        display: inline-block;
+        width: $radio-size;
+        height: $radio-size;
+        margin-right: $radio-size;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        border-radius: 50%;
+        background-color: rgba($dark-blue, 0.5);
+        cursor: pointer;
+        appearance: none;
+
+        &:checked {
+            animation: check 0.5s linear forwards;
+            background-color: rgba($dark-blue, 1);
+        }
+    }
+}
+
+.video {
+    &__button {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    &__preview {
+        position: relative;
+        width: 260px;
+        height: 170px;
+        border: 1px solid $dark_blue;
+        border-radius: 16px;
+        transition: all 0.3s ease-out 0s;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        &:hover .video__button .circle {
+            fill: $dark-blue;
+            opacity: 1;
+        }
+        &:hover .video__button .triangle {
+            stroke: $white;
+            opacity: 1;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__name {
+        padding-top: 25px;
+        display: inline-block;
+    }
+}
+
+@keyframes check {
+    50% {
+        box-shadow: 0 0 0 $radio-size rgba($dark-blue,0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 0 $dark-blue;
+    }
 }

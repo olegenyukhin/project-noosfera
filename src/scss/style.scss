@@ -15,8 +15,4 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-
-    @media screen and (max-width: $wrapper-max-width + 17px) {
-        width: 100%;
-    }
 }

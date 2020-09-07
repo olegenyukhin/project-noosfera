@@ -1,13 +1,23 @@
 .page-footer{
-    padding: 50px 100px;
     background-color: $white-blue;
     border-top: 1px solid $yellow;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+
+    .wrapper {
+        padding: 50px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
     &__logo {
         width: 350px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__docs {
+        padding: 20px 0;
     }
 
     &__address {
@@ -51,4 +61,9 @@
             }
         }
     }
+}
+
+a[download] {
+    font-size: 12px;
+    opacity: 0.5;
 }
