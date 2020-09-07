@@ -1,0 +1,82 @@
+.contacts {
+    &__map-wrapper {
+        position: relative;
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__map {
+        height: 700px;
+        background-image: url("../assets/images/map.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &__block-address {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        // width: 500px;
+        padding: 50px;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        background: $white;
+        box-shadow: 0px 16px 46px rgba(4, 0, 63, 0.1);
+        border-radius: 16px;
+    }
+
+    &__address {
+        margin-bottom: 44px;
+        padding-left: 80px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-icon--geo:before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-image: url("../assets/images/icon/icon-geo.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            left: 0;
+        }
+
+        &-icon--phone:before {
+            background-image: url("../assets/images/icon/icon-phone.png");
+            content: "";
+            position: absolute;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            left: 0;
+        }
+        &-icon--email:before {
+            background-image: url("../assets/images/icon/icon-email.png");
+            content: "";
+            position: absolute;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            left: 0;
+        }
+    }
+}

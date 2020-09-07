@@ -2,11 +2,11 @@
     position: relative;
 }
 
-.header-nav{
+.header-nav {
     position: fixed;
     height: $header-nav-height;
     width: $wrapper-max-width;
-    z-index: 10;
+    z-index: 20;
     background-color: $yellow;
     width: 100%;
 }
@@ -69,13 +69,14 @@
         width: 420px;
     }
 
-    .header__contacts{
+    .header__contacts {
         @include header;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        &>span, &>a {
+        & > span,
+        & > a {
             padding: 5px;
         }
     }
