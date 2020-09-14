@@ -1,5 +1,9 @@
 .page-header {
     position: relative;
+
+    &.page-header-background {
+        background: linear-gradient(269.08deg, $white-blue 56.15%, $white 94.43%);
+    }
 }
 
 .header-nav {

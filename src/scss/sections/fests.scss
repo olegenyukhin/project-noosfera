@@ -2,15 +2,21 @@
     padding: 50px 127px 90px;
     background-color: $white-blue;
 
+    .page-section-background {
+        background-color: $white-blue;
+    }
+
     h2 {
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 }
 
 .fest-wrapper {
     // max-width: 896px;
-    width: 896px;
+    width: 976px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .fest {
@@ -22,6 +28,12 @@
     &__text {
         padding-bottom: 45px;
         opacity: 0.5;
+
+        &--strong {
+            // text-align: left;
+            padding-bottom: 20px;
+            font-weight: 500;
+        }
     }
 }
 
@@ -29,4 +41,33 @@
     float: left;
     width: 300px;
     padding-right: 46px;
+}
+
+.button-block {
+    text-align: center;
+    padding: 70px 0 100px;
+    background-color: $white-blue;
+}
+
+.fest-column {
+    padding: 0 40px;
+    // max-width: 50%;
+    // display: inline-block;
+    // float: left;
+
+    &--fixed {
+        position: sticky;
+        top: 80px;
+        bottom: 50px;
+        max-height: 245px;
+
+        &>img {
+            float: none;
+            padding-bottom: 30px;
+        }
+    }
+
+    .list-column {
+        padding-top: 45px;
+    }
 }
