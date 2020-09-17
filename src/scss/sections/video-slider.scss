@@ -85,10 +85,29 @@
         overflow: hidden;
     }
 
+    &__link {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    &__media {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        border: none;
+        transform: translate(-50%, -50%);
+    }
+
     &__preview {
         position: relative;
-        width: 260px;
-        height: 148px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
         border: 1px solid $dark-blue;
         border-radius: 16px;
         transition: all 0.3s ease-out 0s;
@@ -114,6 +133,62 @@
     &__name {
         padding-top: 25px;
         display: inline-block;
+    }
+
+    &__player {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container {
+        background-color: $white-blue;
+        box-shadow: inset 0 0 0 1px $dark-blue;
+        z-index: 50;
+        display: none;
+        position: fixed;
+        top: calc(50% + 25px);
+        left: 50%;
+        width: $video-rate*16px;
+        height: $video-rate*9px;
+        max-height: calc(81vh - 27px);
+        max-width: calc(144vh - 48px);
+        transform: translate(-50%, -50%);
+
+        .close {
+            &:after {
+                right: -10px;
+                top: -10px;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                display: flex;
+                z-index: 1;
+                align-items: center;
+                justify-content: center;
+                background-color: $white-blue;
+                border: 1px solid $dark-blue;
+                border-radius: 50%;
+                color: $dark-blue;
+                content: "×";
+                cursor: pointer;
+            }
+
+            &:hover:after {
+                background-color: $dark-blue;
+                color: $white-blue;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__background {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($dark-blue, 0.5);
+        z-index: 20;
+        top: 0;
+        left: 0;
     }
 }
 
