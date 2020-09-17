@@ -9,6 +9,8 @@ $header-nav-height: 50px;
 $wrapper-max-width: 1280px;
 $tablet-breackpoint: 1024px;
 
+$video-rate: 50;
+
 @mixin header {
     font: {
         family: "Lora", Arial, sans-serif;
