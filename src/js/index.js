@@ -13,41 +13,46 @@ const nextSliderButton = document.querySelector('.slider__button--next');
 
 let position = 0;
 
-prevSliderButton.addEventListener('click', () => {
+const moveSliderPosition = () => {
+    sliderDots[-position + 1].checked = true;
+    slider.style.transform = `translateX(${position * itemWidth}px)`;
+}
+
+const increasePositionHandler = () => {
     if (position >= 0) {
         position = -maxPosition - 1;
     }
     position++;
+    
+    moveSliderPosition();
+}
 
-    sliderDots[-position + 1].checked = true;
-    slider.style.transform = `translateX(${position * itemWidth}px)`;
-})
-
-nextSliderButton.addEventListener('click', () => {
+const decreasePositionHandler = () => {
     if (position <= -maxPosition) {
         position = 1;
     }
     position--;
+    
+    moveSliderPosition();
+}
 
-    sliderDots[-position + 1].checked = true;
+const clickHandlerDot = ({target}) => {
+    const number = target.dataset.number;
+    const middleItem = Math.ceil(itemsNumber / 2);
+    position = -(number - middleItem);
+
+    if (position > 0) position = 0;
+    if (position < -maxPosition) position = -maxPosition;
+
     slider.style.transform = `translateX(${position * itemWidth}px)`;
-})
+}
+
+prevSliderButton.addEventListener('click', increasePositionHandler)
+nextSliderButton.addEventListener('click', decreasePositionHandler)
 
 sliderDots.forEach(dot => {
-    dot.addEventListener('click', ({ target }) => {
-        const number = target.dataset.number;
-        const middleItem = Math.ceil(itemsNumber / 2);
-        position = -(number - middleItem);
-
-        if (position > 0) position = 0;
-        if (position < -maxPosition) position = -maxPosition;
-
-        slider.style.transform = `translateX(${position * itemWidth}px)`;
-    })
+    dot.addEventListener('click', clickHandlerDot)
 })
-
-
-
 
 function findVideos() {
     let videos = document.querySelectorAll('.video__preview');
