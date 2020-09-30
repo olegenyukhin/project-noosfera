@@ -61,7 +61,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         ...PAGES.map(page => new HTMLWebpackPlugin({
             template: `./src/${page}.html`,
-            filename: `${page === 'index' ? './' : page }/index.html`,
+            filename: `${ page }.html`,
             favicon: './src/favicon.png'
           })),
         new MiniCssExtractPlugin({
