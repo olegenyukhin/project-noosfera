@@ -10,5 +10,10 @@
         position: relative;
         left: 5px;
         top: 2px;
-   }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 15px 15px rgba($yellow, 0.4);
+    }
 }

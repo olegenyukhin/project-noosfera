@@ -45,7 +45,9 @@
         }
         a {
             padding: 16px;
-            &:hover {
+            &:hover,
+            &:focus {
+                outline: none;
                 text-decoration: underline;
                 // font-weight: bold;
                 // opacity: 1;

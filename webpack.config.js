@@ -3,7 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const PAGES = ['index', 'pushkin-fest']
+const PAGES = ['index', 'pushkin-fest', 'contacts']
 
 module.exports = {
     entry: './src/js/index.js',

@@ -12,18 +12,18 @@
 
     .wrapper {
         padding: 50px 127px 30px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        // grid-column-gap: 60px;
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
 
         .partner {
             display: flex;
             align-items: center;
             padding-bottom: 30px;
+            max-width: 50%;
 
             &__img {
                 width: 163px;
+                flex-shrink: 0;
             }
 
             &__name {
