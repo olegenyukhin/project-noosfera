@@ -8,24 +8,26 @@ function setupVideo(video) {
     const link = video.querySelector('.video__link');
     const id = parseMediaURL(link);
 
-    video.addEventListener('click', () => {
+    const videoClickHandler = () => {
         const iframe = createIframe(id);
         const videoPlayer = createVideoPlayer();
         document.querySelector('body').appendChild(videoPlayer);
         videoPlayer.appendChild(iframe);
-    });
+    }
 
-    link?.removeAttribute('href');
+    video.addEventListener('click', videoClickHandler);
+
+    link && link.removeAttribute('href');
 }
 
 function parseMediaURL(link) {
-    const url = link?.href;
-    let match = url?.split('/') || [];
+    const url = link && link.href;
+    let match = url && url.split('/') || [];
 
     const video = match.pop();
 
     const regexp = /(watch\?v=)?([a-zA-Z0-9_-]+)&?/i;
-    match = video?.match(regexp) || [];
+    match = video && video.match(regexp) || [];
     const id = match.pop();
 
     return id || video;

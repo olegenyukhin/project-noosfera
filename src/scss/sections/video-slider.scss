@@ -37,6 +37,7 @@
         width: 300px;
         padding: 22px;
         text-align: center;
+        flex-shrink: 0;
     }
 
     &__button--prev,
@@ -86,6 +87,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
+
+        & .circle,
+        & .triangle {
+            transition: all 0.1s ease-out 0s;
+        }
     }
 
     &__link {
