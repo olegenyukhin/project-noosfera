@@ -56,7 +56,9 @@
 
         a {
             padding: 3px 16px;
-            &:hover {
+            &:hover,
+            &:focus {
+                outline: none;
                 text-decoration: underline;
             }
         }
@@ -66,4 +68,8 @@
 a[download] {
     font-size: 12px;
     opacity: 0.5;
+    &:focus {
+        outline: none;
+        opacity: 1;
+    }
 }

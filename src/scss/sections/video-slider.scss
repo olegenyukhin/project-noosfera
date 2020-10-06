@@ -35,8 +35,9 @@
     &__item {
         display: inline-block;
         width: 300px;
-        padding: 25px;
+        padding: 22px;
         text-align: center;
+        flex-shrink: 0;
     }
 
     &__button--prev,
@@ -48,7 +49,9 @@
         font-size: 70px;
         opacity: 0.5;
 
-        &:hover:not(:disabled) {
+        &:hover:not(:disabled),
+        &:focus {
+            outline: none;
             opacity: 1;
         }
     }
@@ -67,6 +70,7 @@
         appearance: none;
 
         &:checked {
+            outline: none;
             animation: check 0.5s linear forwards;
             background-color: rgba($dark-blue, 1);
         }
@@ -83,6 +87,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
+
+        & .circle,
+        & .triangle {
+            transition: all 0.1s ease-out 0s;
+        }
     }
 
     &__link {
@@ -92,27 +101,43 @@
         width: 100%;
         height: 100%;
         border: none;
+        border-radius: 16px;
+        // border: 1px solid $dark-blue;
+        // overflow: hidden;
+        background-color: $dark-blue;
+
+        &.link-CRX_RWR91XY {
+            background: url('./../assets/images/video-posters/CRX_RWR91XY.jpg') center/cover no-repeat;
+        }
+        &.link-HY4jG_ca5H8 {
+            background: url('./../assets/images/video-posters/HY4jG_ca5H8.jpg') center/cover no-repeat;
+        }
+        &.link-lG--ZmeEWZg {
+            background: url('./../assets/images/video-posters/lG--ZmeEWZg.jpg') center/cover no-repeat;
+        }
+        &.link-odzqq0RBCMc {
+            background: url('./../assets/images/video-posters/odzqq0RBCMc.jpg') center/cover no-repeat;
+        }
     }
 
     &__poster {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         width: 100%;
         border: none;
         transform: translate(-50%, -50%);
+        border: 1px solid $dark-blue;
+        border-radius: 16px;
+        overflow: hidden;
     }
 
     &__preview {
         position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-        border: 1px solid $dark-blue;
-        border-radius: 16px;
+        width: 256px;
+        height: 144px;
         transition: all 0.3s ease-out 0s;
         cursor: pointer;
-        overflow: hidden;
         display: flex;
         justify-content: center;
 
@@ -125,8 +150,10 @@
             opacity: 1;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(1.1);
+            outline: none;
         }
     }
 
@@ -142,9 +169,10 @@
 
     &__container {
         background-color: $white-blue;
-        box-shadow: inset 0 0 0 1px $dark-blue;
+        box-shadow: inset 0 0 0 1px $dark-blue,
+                    0 10px 25px rgba($dark-blue, 0.5);
         z-index: 50;
-        display: none;
+        display: block;
         position: fixed;
         top: calc(50% + 25px);
         left: 50%;
