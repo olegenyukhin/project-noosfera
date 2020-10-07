@@ -1,50 +1,71 @@
-const slider = document.querySelector('.slider__list');
-const itemsNumber = slider.children.length;
-const itemWidth = slider.children[0].clientWidth;
-const maxPosition = itemsNumber - (slider.clientWidth / itemWidth);
+(function () {
+    const slider = document.querySelector('.slider__list');
 
-const sliderDots = document.querySelectorAll('.slider__dot');
+    if (!slider) return;
 
-const prevSliderButton = document.querySelector('.slider__button--prev');
-const nextSliderButton = document.querySelector('.slider__button--next');
+    let itemsNumber;
+    let itemWidth;
+    let maxPosition;
 
-let position = 0;
-
-const moveSliderPosition = () => {
-    sliderDots[-position + 1].checked = true;
-    slider.style.transform = `translateX(${position * itemWidth}px)`;
-}
-
-const increasePositionHandler = () => {
-    if (position >= 0) {
-        position = -maxPosition - 1;
+    const calculateData = () => {
+        itemsNumber = slider.children.length;
+        itemWidth = slider.children[0].clientWidth;
+        maxPosition = itemsNumber - (slider.clientWidth / itemWidth);
     }
-    position++;
-    moveSliderPosition();
-}
 
-const decreasePositionHandler = () => {
-    if (position <= -maxPosition) {
-        position = 1;
+    const resizeHandler = () => {
+        calculateData();
     }
-    position--;
-    moveSliderPosition();
-}
 
-const clickHandlerDot = ({target}) => {
-    const number = target.dataset.number;
-    const middleItem = Math.ceil(itemsNumber / 2);
-    position = -(number - middleItem);
+    calculateData();
+    window.addEventListener('resize', resizeHandler);
 
-    if (position > 0) position = 0;
-    if (position < -maxPosition) position = -maxPosition;
+    const sliderDots = document.querySelectorAll('.slider__dot');
 
-    slider.style.transform = `translateX(${position * itemWidth}px)`;
-}
+    const prevSliderButton = document.querySelector('.slider__button--prev');
+    const nextSliderButton = document.querySelector('.slider__button--next');
 
-prevSliderButton.addEventListener('click', increasePositionHandler)
-nextSliderButton.addEventListener('click', decreasePositionHandler)
+    let position = 0;
 
-sliderDots.forEach(dot => {
-    dot.addEventListener('click', clickHandlerDot)
-})
+    const moveSliderPosition = () => {
+        slider.style.transform = `translateX(${position * itemWidth}px)`;
+        const newPosition = -position + (slider.clientWidth / itemWidth > 1 ? (itemsNumber - maxPosition) % 2 : 0);
+        if (sliderDots[newPosition]) {
+            sliderDots[newPosition].checked = true;
+        }
+    }
+
+    const increasePositionHandler = () => {
+        if (position >= 0) {
+            position = -maxPosition - 1;
+        }
+        position++;
+        moveSliderPosition();
+    }
+
+    const decreasePositionHandler = () => {
+        if (position <= -maxPosition) {
+            position = 1;
+        }
+        position--;
+        moveSliderPosition();
+    }
+
+    const clickHandlerDot = ({ target }) => {
+        const number = target.dataset.number;
+        const middleItem = Math.ceil(itemsNumber / 2);
+        position = -(number - middleItem);
+
+        if (position > 0) position = 0;
+        if (position < -maxPosition) position = -maxPosition;
+
+        slider.style.transform = `translateX(${position * itemWidth}px)`;
+    }
+
+    prevSliderButton.addEventListener('click', increasePositionHandler)
+    nextSliderButton.addEventListener('click', decreasePositionHandler)
+
+    sliderDots.forEach(dot => {
+        dot.addEventListener('click', clickHandlerDot)
+    })
+})()
