@@ -1,5 +1,6 @@
 .page-header {
     position: relative;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
 
     &.page-header-background {
         background: linear-gradient(269.08deg, $white-blue 56.15%, $white 94.43%);
@@ -9,23 +10,13 @@
 .header-nav {
     position: fixed;
     height: $header-nav-height;
-    width: $wrapper-max-width;
+    // width: $wrapper-max-width;
     z-index: 20;
     background-color: $yellow;
     width: 100%;
 }
 
-.header-menu-button {
-    width: $header-nav-height;
-    height: $header-nav-height;
-    position: absolute;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-}
-
 .main-nav {
-    transition: all 0.5s ease-out 0s;
     height: $header-nav-height;
     display: flex;
     align-items: center;
@@ -58,12 +49,10 @@
 
 .planet {
     position: absolute;
-    background: url("../assets/images/planet.svg");
-    width: 1013px;
-    height: 1009px;
-    top: -370px;
+    background: url("../assets/images/planet.svg") no-repeat 770px -370px/1013px 1009px;
+    width: 100vw;
+    height: 200vh;
     z-index: -10;
-    right: -310px;
 }
 
 .header {
@@ -72,7 +61,8 @@
     padding: ($header-nav-height + 30px) 100px;
 
     .header__logo {
-        width: 420px;
+        max-width: 420px;
+        width: 100%;
     }
 
     .header__contacts {
@@ -84,6 +74,57 @@
         & > span,
         & > a {
             padding: 5px;
+        }
+    }
+
+    &-menu-button {
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        width: 35px;
+        height: 30px;
+        margin: 25px 15px;
+        cursor: pointer;
+        display: inline-block;
+
+        &__item {
+            background-color: $dark-blue;
+            position: absolute;
+            border-radius: 2px;
+            width: 100%;
+            height: 4px;
+            transition-duration: 500ms
+        }
+
+        &__item:nth-child(1) {
+            top: 0px;
+            left: 0px;
+        }
+
+        &__item:nth-child(2) {
+            top: 13px;
+            left: 0px;
+            opacity: 1;
+        }
+
+        &__item:nth-child(3){
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .header-nav--opened &__item:nth-child(1){
+            transform: rotate(45deg);
+            top: 13px;
+        }
+
+        .header-nav--opened &__item:nth-child(2){
+            opacity: 0;
+        }
+
+        .header-nav--opened &__item:nth-child(3){
+            transform: rotate(-45deg);
+            top: 13px;
         }
     }
 }

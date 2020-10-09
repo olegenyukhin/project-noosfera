@@ -28,7 +28,6 @@
     }
 
     &__map {
-        min-width: 458px;
         height: 700px;
         background-image: url("../assets/images/map.jpeg");
         background-repeat: no-repeat;
@@ -107,6 +106,7 @@
             display: flex;
             align-items: flex-end;
             overflow: hidden;
+            width: 458px;
         }
 
         .contacts__address {
