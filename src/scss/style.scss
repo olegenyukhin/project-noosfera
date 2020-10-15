@@ -9,12 +9,14 @@
 @import "./sections/partners.scss";
 @import "./sections/contacts";
 @import"./sections/footer.scss";
+@import"./sections/about.scss";
 
 .wrapper {
     width: $wrapper-max-width;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    padding: 0 10px;
 }
 
 @import"./media.scss";

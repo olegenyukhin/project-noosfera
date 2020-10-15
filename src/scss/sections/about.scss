@@ -1,0 +1,54 @@
+.main-activities {
+    margin-bottom: 68px;
+
+    &-number {
+        font-family: "Lora", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 70px;
+        color: $yellow;
+    }
+
+    &__block {
+        align-items: center;
+        text-align: center;
+        width: 180px;
+        margin-bottom: 15px;
+    }
+}
+
+
+.about {
+    font-size: 18px;
+
+    .about-wrapper {
+        max-width: 768px;
+        padding-bottom: 85px;
+    }
+
+    &-structure__block {
+        width: 383px;
+        padding-right: 10px;
+    }
+
+    &-structure__line {
+        padding-bottom: 10px;
+    }
+}
+
+.docs__link {
+    &-down {
+        align-items: center;
+        text-align: center;
+        width: 85px;
+
+        &-text {
+            font-size: 16px;
+        }
+    }
+}
+
+.docs__list-wrapper {
+    margin-right: 41px;
+    margin-bottom: 15px;
+}

@@ -4,10 +4,6 @@
     &.page-section-background {
         background-color: $white-blue;
         padding: 50px 0 100px;
-
-        .contacts__title {
-            margin-bottom: 40px;
-        }
     }
 
     .wrapper {
@@ -21,10 +17,6 @@
     &__map-wrapper {
         position: relative;
         margin-bottom: 80px;
-    }
-
-    &__title {
-        margin-bottom: 50px;
     }
 
     &__map {
