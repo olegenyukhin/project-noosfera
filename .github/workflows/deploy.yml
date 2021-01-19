@@ -26,3 +26,4 @@ jobs:
       - run: npm run build
       # Deploy
       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . cl77536@vp-volga.ru:vp-volga.ru/public_html/
+      
