@@ -1,6 +1,6 @@
-@import "./common/variables.scss";
-@import "./common/settings.scss";
-@import "./common/common-elements";
+@import "./common/_variables.scss";
+@import "./common/_settings.scss";
+@import "./common/_common-elements";
 
 @import "./sections/header.scss";
 @import "./sections/promo.scss";
@@ -19,4 +19,8 @@
     padding: 0 10px;
 }
 
-@import"./media.scss";
+html, body {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+@import "./media.scss";
